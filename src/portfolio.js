@@ -46,13 +46,12 @@ const skillsSection = {
   subTitle:
     "TECH SAVVY FULL STACK DEVELOPER WHO IS TECH STACK FLEXIBLE. I AM VERY ENTHUSIASTIC ABOUT LEARNING NEW TECHNOLOGIES AND BUILDING NEW PROJECTS.",
   skills: [
+    emoji("⚡ Develop highly interactive web applications"),
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
+      "⚡ Integration of third party services like Firebase/ Azure / Vercel / CloudFlare"
     ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
-    emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
-    )
+    emoji("⚡ Very tech fluid and writes clean code"),
+    emoji("⚡ Good knowledge of how to work with a large scale application")
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
