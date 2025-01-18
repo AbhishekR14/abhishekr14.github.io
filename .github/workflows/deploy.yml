@@ -39,11 +39,11 @@ jobs:
 
       # Step 2: Setup Node.js
       - name: Setup Node.js 🔧
-        uses: actions/setup-node@v3.8.1
+        uses: actions/setup-node@v3
         with:
           node-version: 18.x
 
-      # Step 3: Install npm and dependencies
+      # Step 3: Install npm and Dependencies
       - name: Install npm and Dependencies 🔧
         run: |
           npm install -g npm@latest
