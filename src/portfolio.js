@@ -1,7 +1,7 @@
 // To change portfolio colors globally go to the  _globalColor.scss file
 
 import emoji from "react-easy-emoji";
-import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
+import splashAnimation from "./assets/lottie/splashAnimation";
 
 // Splash Screen
 
@@ -34,7 +34,7 @@ const socialMediaLinks = {
   github: "https://github.com/AbhishekR14/",
   linkedin: "https://www.linkedin.com/in/abhishek-ranjann",
   gmail: "aranjan0288@gmail.com",
-  // Instagram, Twitter and Kaggle are also supported in the links!
+  // Instagram, Twitter are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
 };
@@ -111,55 +111,30 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-docker"
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
 
 // Education Section
 
 const educationInfo = {
-  display: true, // Set false to hide this section, defaults to true
+  display: true,
   schools: [
     {
-      schoolName: "Harvard University",
-      logo: require("./assets/images/harvardLogo.png"),
-      subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+      schoolName: "PES University (RR Campus)",
+      logo: require("./assets/images/Pes-University-logo.png"),
+      subHeader:
+        "Bachelor of Technology in Electronics and Communication Engineering",
+      duration: "June 2016 - June 2022",
+      desc: "CGPA - 8.28"
     },
     {
-      schoolName: "Stanford University",
-      logo: require("./assets/images/stanfordLogo.png"),
-      subHeader: "Bachelor of Science in Computer Science",
-      duration: "September 2013 - April 2017",
-      desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
+      schoolName: "Delhi Public School, Bangalore North",
+      logo: require("./assets/images/DPS-logo.png"),
+      subHeader: "12th Grade Sicence (PCMC) CBSE Board",
+      duration: "July 2016 - March 2018",
+      desc: "Percentage - 94.4%"
     }
   ]
-};
-
-// Your top 3 proficient stacks/tech experience
-
-const techStack = {
-  viewSkillBars: false, //Set it to true to show Proficiency Section
-  experience: [
-    {
-      Stack: "Frontend/Design", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
-    },
-    {
-      Stack: "Backend",
-      progressPercentage: "70%"
-    },
-    {
-      Stack: "Programming",
-      progressPercentage: "60%"
-    }
-  ],
-  displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
 };
 
 // Work experience section
@@ -169,35 +144,35 @@ const workExperiences = {
   experience: [
     {
       role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      company: "Wells Fargo",
+      companylogo: require("./assets/images/wf-logo.png"),
+      date: "September 2022 – Present",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Received Manager Appreciation Spotlight award on September 2024.",
+        "Contributed on building the JAVA - React document viewing tool and on-boarded 250+ Doc Classes on new application.",
+        "Managed a .NET web application, a Wells Fargo Document Viewing tool to view all the stored documents.Decommissioned the .NET document viewing tool and Migrated the entire functionality to the new document viewing tool written in JAVA-React.",
+        "Created an in-house .NET application that would reduce/remove dependency on a third-party software (ION Trading). Hence saving the $100K paid for the ION Trading software."
       ]
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
+      role: "Intern",
+      company: "Bharat Electronics Limited",
+      companylogo: require("./assets/images/bel-logo.png"),
       date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      descBullets: [
+        "Fixed a long ongoing bug in the BEL internal used web application written in ReactJS",
+        "Industrial Awareness about various BEL Products."
+      ]
     }
   ]
 };
 
-/* Your Personal Projects Section to View Your Github Pinned Projects
-To know how to get github key look at readme.md */
-
 const personalProject = {
   showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
 
 // Achievement Section
-// Include certificates, talks etc
 
 const achievementSection = {
   title: emoji("Achievements And Certifications 🏆 "),
@@ -206,120 +181,79 @@ const achievementSection = {
 
   achievementsCards: [
     {
-      title: "Google Code-In Finalist",
+      title: "Manager Appreciation Spotlight Award.",
       subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-      image: require("./assets/images/codeInLogo.webp"),
-      imageAlt: "Google Code-In Logo",
+        "Received Manager Appreciation Spotlight award on September 2024 for my contributions to the JAVA and .NET projects",
+      image: require("./assets/images/wf-logo.png"),
+      imageAlt: "Wells Fargo Logo",
+      footerLink: [
+        {
+          name: "Award Letter",
+          url: "https://drive.google.com/file/d/1wKLAIk5-rpxfNM97P12N5BhtEUYj44zo/view"
+        }
+      ]
+    },
+    {
+      title: "Full Stack Development Course",
+      subtitle: "Completed the Full Stack Development Course By 100x DEVS W",
+      image: require("./assets/images/100xdevs-logo.png"),
+      imageAlt: "100x Devs Logo",
       footerLink: [
         {
           name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
-        },
-        {
-          name: "Award Letter",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
-        },
-        {
-          name: "Google Code-in Blog",
-          url: "https://personalproject.googleblog.com/2019/01/google-code-in-2018-winners.html"
+          url: "https://app.100xdevs.com/certificate/verify/YQ3XPQWT"
         }
       ]
     },
+
     {
-      title: "Google Assistant Action",
+      title: "AZ-900 Azure Fundamentals",
+      subtitle: "Completed AZ-900 Azure Fundamentals Certifcation By Microsoft",
+      image: require("./assets/images/azure-logo.png"),
+      imageAlt: "Azure Logo",
+      footerLink: [
+        {
+          name: "Certification",
+          url: "https://www.credly.com/badges/46db3e37-ddb5-44b2-a72f-0f4501e2a4aa/public_url"
+        }
+      ]
+    },
+
+    {
+      title: "Basic SQL For Data Science",
+      subtitle: "Completed Basic SQL For Data Science Certification By UCDavis",
+      image: require("./assets/images/ucdavis-logo.png"),
+      imageAlt: "UCDavis Logo",
+      footerLink: [
+        {
+          name: "Certification",
+          url: "https://www.coursera.org/account/accomplishments/verify/8FZ5WDWZB4A8"
+        }
+      ]
+    },
+
+    {
+      title: ".NET, MERN Stack and JAVA certifications",
       subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      imageAlt: "Google Assistant Action Logo",
+        "Completed Certifcations in .NET, MERN Stack and JAVA provided By Wells Fargo",
+      image: require("./assets/images/wf-logo.png"),
+      imageAlt: "Wells Fargo Logo",
       footerLink: [
         {
-          name: "View Google Assistant Action",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
-        }
-      ]
-    },
-
-    {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
-      image: require("./assets/images/pwaLogo.webp"),
-      imageAlt: "PWA Logo",
-      footerLink: [
-        {name: "Certification", url: ""},
-        {
-          name: "Final Project",
-          url: "https://pakistan-olx-1.firebaseapp.com/"
+          name: "Certifications",
+          url: "https://drive.google.com/drive/folders/1C9ODYEGjOJcr8H6c51gyyj4-ntVzZkNn"
         }
       ]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
-};
-
-// Blogs Section
-
-const blogSection = {
-  title: "Blogs",
-  subtitle:
-    "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
-  displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
-  blogs: [
-    {
-      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
-      title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
-      description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
-    },
-    {
-      url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
-      title: "Why REACT is The Best?",
-      description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
-    }
-  ],
-  display: false // Set false to hide this section, defaults to true
-};
-
-// Talks Sections
-
-const talkSection = {
-  title: "TALKS",
-  subtitle: emoji(
-    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
-  ),
-
-  talks: [
-    {
-      title: "Build Actions For Google Assistant",
-      subtitle: "Codelab at GDG DevFest Karachi 2019",
-      slides_url: "https://bit.ly/saadpasta-slides",
-      event_url: "https://www.facebook.com/events/2339906106275053/"
-    }
-  ],
-  display: false // Set false to hide this section, defaults to true
-};
-
-// Podcast Section
-
-const podcastSection = {
-  title: emoji("Podcast 🎙️"),
-  subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
-
-  // Please Provide with Your Podcast embeded Link
-  podcast: [
-    "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
-  ],
-  display: false // Set false to hide this section, defaults to true
+  display: true
 };
 
 // Resume Section
 const resumeSection = {
   title: "Resume",
   subtitle: "Feel free to download my resume",
-
-  // Please Provide with Your Podcast embeded Link
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
 
 const contactInfo = {
@@ -337,7 +271,7 @@ const twitterDetails = {
   display: false // Set true to display this section, defaults to false
 };
 
-const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = true;
 
 export {
   illustration,
@@ -346,13 +280,9 @@ export {
   splashScreen,
   skillsSection,
   educationInfo,
-  techStack,
   workExperiences,
   personalProject,
   achievementSection,
-  blogSection,
-  talkSection,
-  podcastSection,
   contactInfo,
   twitterDetails,
   isHireable,
