@@ -1,43 +1,53 @@
 name: Build and Deploy
+
 env:
   CI: false
   USERNAME_GITHUB: ${{ github.repository_owner }}
-  REACT_APP_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Automatically set by GitHub Actions
+  REACT_APP_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   USE_GITHUB_DATA: "true"
 
 on:
-  workflow_dispatch: # Allows manual triggering
+  workflow_dispatch:
   push:
     branches:
-      - main # Trigger on pushes to the 'main' branch
+      - master
   schedule:
-    - cron: "0 12 * * 1" # Run every Monday at 12:00 PM UTC
+    - cron: "0 12 * * 1" # Runs every Monday at 12:00 PM UTC
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
+    permissions: # Ensures the workflow has proper permissions
+      contents: write
+
     steps:
-      - name: Checkout 🛎️
+      # Step 1: Checkout the repository
+      - name: Checkout Repository 🛎️
         uses: actions/checkout@v3
         with:
-          persist-credentials: false # Prevents conflicts with GitHub Pages deploy
+          persist-credentials: false
 
+      # Step 2: Setup Node.js
       - name: Setup Node.js 🔧
         uses: actions/setup-node@v3.8.1
         with:
           node-version: 18.x
 
-      - name: Install Dependencies 🔧
-        run: npm install
+      # Step 3: Install npm and dependencies
+      - name: Install npm and Dependencies 🔧
+        run: |
+          npm install -g npm@latest
+          npm install
 
-      - name: Build Project 🔨
+      # Step 4: Build the Project
+      - name: Build Project 🚀
         run: npm run build
 
+      # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # Deployment branch
-          FOLDER: build # Directory containing the built website
-          CLEAN: true # Removes existing content before deployment
+          branch: gh-pages # The branch to deploy to
+          folder: build # The folder to deploy
+          token: ${{ secrets.GITHUB_TOKEN }}
