@@ -2,39 +2,42 @@ name: Build and Deploy
 env:
   CI: false
   USERNAME_GITHUB: ${{ github.repository_owner }}
-  REACT_APP_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This is automatically set by Github Actions
+  REACT_APP_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Automatically set by GitHub Actions
   USE_GITHUB_DATA: "true"
+
 on:
-  workflow_dispatch:
+  workflow_dispatch: # Allows manual triggering
   push:
     branches:
-      - master
+      - main # Trigger on pushes to the 'main' branch
   schedule:
-    - cron: "0 12 * * 1" # see https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events
+    - cron: "0 12 * * 1" # Run every Monday at 12:00 PM UTC
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3 # If you're using actions/checkout@v3 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        uses: actions/checkout@v3
         with:
-          persist-credentials: false
+          persist-credentials: false # Prevents conflicts with GitHub Pages deploy
 
       - name: Setup Node.js 🔧
         uses: actions/setup-node@v3.8.1
         with:
           node-version: 18.x
 
-      - name: Update npm 🚀
-        run: npm install -g npm@latest
+      - name: Install Dependencies 🔧
+        run: npm install
 
-      - name: Install and Build 🔧 # Build the Project
-        run: |
-          npm install
-          npm run build
-      - name: Deploy 🚀
+      - name: Build Project 🔨
+        run: npm run build
+
+      - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This is provided by GitHub.
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: build # The folder the action should deploy.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # Deployment branch
+          FOLDER: build # Directory containing the built website
+          CLEAN: true # Removes existing content before deployment
