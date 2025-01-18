@@ -21,7 +21,7 @@ const greeting = {
   username: "Abhishek Ranjan",
   title: "Hi all, I'm Abhishek",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
+    "A passionate Full Stack Software Developer 🚀 with expertise in Java, .NET, and MERN stack. I have 3 years of professional experience building web applications using Java, .NET, React.js, Node.js, and other modern libraries and frameworks."
   ),
   resumeLink:
     "https://drive.google.com/file/d/1XdW2NGvHt0PWsPywwNlOmtmPnHQ9fDOx/view", // Set to empty to hide the button
@@ -43,7 +43,8 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle:
+    "TECH SAVVY FULL STACK DEVELOPER WHO IS TECH STACK FLEXIBLE. I AM VERY ENTHUSIASTIC ABOUT LEARNING NEW TECHNOLOGIES AND BUILDING NEW PROJECTS.",
   skills: [
     emoji(
       "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
@@ -59,56 +60,72 @@ https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
-      skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
+      skillName: "Java",
+      fontAwesomeClassname: "fab fa-java"
     },
     {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
+      skillName: ".NET",
+      fontAwesomeClassname: "fas fa-code"
     },
     {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
+      skillName: "React.Js",
+      fontAwesomeClassname: "fab fa-react"
+    },
+    {
+      skillName: "Node.Js",
+      fontAwesomeClassname: "fab fa-node"
+    },
+    {
+      skillName: "SpringBoot",
+      fontAwesomeClassname: "fas fa-leaf"
+    },
+    {
+      skillName: "C#",
+      fontAwesomeClassname: "fas fa-laptop-code"
+    },
+    {
+      skillName: "Next.Js",
+      fontAwesomeClassname: "fas fa-layer-group"
     },
     {
       skillName: "JavaScript",
       fontAwesomeClassname: "fab fa-js"
     },
     {
-      skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
+      skillName: "Azure",
+      fontAwesomeClassname: "fab fa-microsoft"
     },
     {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
-    },
-    {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
-    },
-    {
-      skillName: "sql-database",
+      skillName: "SQL",
       fontAwesomeClassname: "fas fa-database"
     },
     {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
+      skillName: "PostGresSQL",
+      fontAwesomeClassname: "fas fa-paw"
     },
     {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
+      skillName: "NoSQL",
+      fontAwesomeClassname: "fas fa-server"
+    },
+    {
+      skillName: "MongoDB",
+      fontAwesomeClassname: "fas fa-leaf"
+    },
+    {
+      skillName: "TailwindCSS",
+      fontAwesomeClassname: "fas fa-cogs"
+    },
+    {
+      skillName: "TypeScript",
+      fontAwesomeClassname: "fas fa-puzzle-piece"
     },
     {
       skillName: "python",
       fontAwesomeClassname: "fab fa-python"
     },
     {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
+      skillName: "C++",
+      fontAwesomeClassname: "fas fa-terminal"
     }
   ],
   display: true
