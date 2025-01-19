@@ -48,7 +48,7 @@ const skillsSection = {
   skills: [
     emoji("⚡ I Develop highly interactive web applications"),
     emoji(
-      "⚡ I Seamlessly Integration third party services like Firebase, Azure, Vercel, CloudFlare, etc"
+      "⚡ I Seamlessly Integrate third party services like Firebase, Azure, Vercel, CloudFlare, etc"
     ),
     emoji("⚡ I am Very tech fluid and write clean code"),
     emoji(
@@ -277,7 +277,7 @@ const resumeSection = {
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
-    "Want to discuss a project or just want to say Hi? My Inbox is open for all!",
+    "Want to discuss a project or just want to say Hi? My Inbox is open to all!",
   number: "+91-8880796319",
   email_address: "aranjan0288@gmail.com"
 };
