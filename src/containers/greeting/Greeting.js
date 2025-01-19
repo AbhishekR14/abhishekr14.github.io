@@ -46,7 +46,21 @@ export default function Greeting() {
                     download="Abhishek_Ranjan_Resume.pdf"
                     className="download-link-button"
                   >
-                    <Button text="Download resume" />
+                    <Button
+                      text={
+                        <>
+                          <span
+                            className="download-icon"
+                            role="img"
+                            aria-label="Download"
+                          >
+                            📥
+                          </span>
+                          <span className="download-text"> Download</span>
+                          <span> Resume</span>
+                        </>
+                      }
+                    />
                   </a>
                 )}
               </div>

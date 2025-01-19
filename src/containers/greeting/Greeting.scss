@@ -40,6 +40,13 @@
 }
 .download-link-button {
   text-decoration: none;
+  .download-icon {
+    display: none;
+  }
+
+  .download-text {
+    display: inline;
+  }
 }
 
 .greeting-text {
@@ -100,6 +107,16 @@
   }
 }
 @media (max-width: 768px) {
+  .download-link-button {
+    .download-icon {
+      display: inline;
+      margin-right: 5px;
+    }
+
+    .download-text {
+      display: none;
+    }
+  }
   .button-greeting-div {
     justify-content: space-around;
   }

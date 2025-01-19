@@ -19,9 +19,9 @@ const illustration = {
 
 const greeting = {
   username: "Abhishek Ranjan",
-  title: "Hi all, I'm Abhishek",
+  title: "Hi, I'm Abhishek",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 with expertise in Java, .NET, and MERN stack. I have 3 years of professional experience building web applications using Java, .NET, React.js, Node.js, and other modern libraries and frameworks."
+    "I am a passionate Full Stack Software Developer 🚀 with expertise in Java, .NET, and the MERN stack. With 3 years of professional experience, I specialize in building scalable and high-performance web applications using Java, .NET, React.js, Node.js, and other modern libraries and frameworks."
   ),
   resumeLink:
     "https://drive.google.com/file/d/1XdW2NGvHt0PWsPywwNlOmtmPnHQ9fDOx/view", // Set to empty to hide the button
@@ -44,7 +44,7 @@ const socialMediaLinks = {
 const skillsSection = {
   title: "What I do",
   subTitle:
-    "TECH SAVVY FULL STACK DEVELOPER WHO IS TECH STACK FLEXIBLE. I AM VERY ENTHUSIASTIC ABOUT LEARNING NEW TECHNOLOGIES AND BUILDING NEW PROJECTS.",
+    "A Tech-Savvy Full Stack Developer who is tech stack flexible. I am very enthusiastic about learning new technologies and building impactful projects.",
   skills: [
     emoji("⚡ Develop highly interactive web applications"),
     emoji(
