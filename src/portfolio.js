@@ -21,7 +21,7 @@ const greeting = {
   username: "Abhishek Ranjan",
   title: "Hi, I'm Abhishek",
   subTitle: emoji(
-    "I am a passionate Full Stack Software Developer 🚀 with expertise in Java, .NET, and the MERN stack. With 3 years of professional experience, I specialize in building scalable and high-performance web applications using Java, .NET, React.js, Node.js, and other modern libraries and frameworks."
+    "I am a passionate Full Stack Developer 🚀 with expertise in Java, .NET, and the MERN stack. With 3 years of professional experience, I specialize in building scalable and high-performance web applications using Java, .NET, React.js, Node.js, and other modern libraries and frameworks."
   ),
   resumeLink:
     "https://drive.google.com/file/d/1XdW2NGvHt0PWsPywwNlOmtmPnHQ9fDOx/view", // Set to empty to hide the button
@@ -46,12 +46,14 @@ const skillsSection = {
   subTitle:
     "A Tech-Savvy Full Stack Developer who is tech stack flexible. I am very enthusiastic about learning new technologies and building impactful projects.",
   skills: [
-    emoji("⚡ Develop highly interactive web applications"),
+    emoji("⚡ I Develop highly interactive web applications"),
     emoji(
-      "⚡ Integration of third party services like Firebase/ Azure / Vercel / CloudFlare"
+      "⚡ I Seamlessly Integration third party services like Firebase, Azure, Vercel, CloudFlare, etc"
     ),
-    emoji("⚡ Very tech fluid and writes clean code"),
-    emoji("⚡ Good knowledge of how to work with a large scale application")
+    emoji("⚡ I am Very tech fluid and write clean code"),
+    emoji(
+      "⚡ I have good knowledge of how to work with a large scale application"
+    )
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -164,8 +166,8 @@ const workExperiences = {
       companylogo: require("./assets/images/wf-logo.png"),
       date: "September 2022 – Present",
       descBullets: [
-        "Received Manager Appreciation Spotlight award on September 2024.",
-        "Contributed on building the JAVA - React document viewing tool and on-boarded 250+ Doc Classes on new application.",
+        "Received Manager Appreciation Spotlight award in September 2024.",
+        "Contributed on building the JAVA - React document viewing tool and on-boarded 250+ Doc Classes onto the new application.",
         "Managed a .NET web application, a Wells Fargo Document Viewing tool to view all the stored documents.Decommissioned the .NET document viewing tool and Migrated the entire functionality to the new document viewing tool written in JAVA-React.",
         "Created an in-house .NET application that would reduce/remove dependency on a third-party software (ION Trading). Hence saving the $100K paid for the ION Trading software."
       ]
@@ -199,7 +201,7 @@ const achievementSection = {
     {
       title: "Manager Appreciation Spotlight Award.",
       subtitle:
-        "Received Manager Appreciation Spotlight award on September 2024 for my contributions to the JAVA and .NET projects",
+        "Received Manager Appreciation Spotlight award in September 2024 for my contributions to the JAVA and .NET projects",
       image: require("./assets/images/wf-logo.png"),
       imageAlt: "Wells Fargo Logo",
       footerLink: [
@@ -275,7 +277,7 @@ const resumeSection = {
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
+    "Want to discuss a project or just want to say Hi? My Inbox is open for all!",
   number: "+91-8880796319",
   email_address: "aranjan0288@gmail.com"
 };
