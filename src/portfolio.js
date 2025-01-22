@@ -195,7 +195,7 @@ const personalProject = {
 const achievementSection = {
   title: emoji("Achievements And Certifications 🏆 "),
   subtitle:
-    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
+    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done!",
 
   achievementsCards: [
     {
@@ -213,7 +213,7 @@ const achievementSection = {
     },
     {
       title: "Full Stack Development Course",
-      subtitle: "Completed the Full Stack Development Course By 100x DEVS W",
+      subtitle: "Completed the Full Stack Development Course By 100x Devs",
       image: require("./assets/images/100xdevs-logo.png"),
       imageAlt: "100x Devs Logo",
       footerLink: [
