@@ -164,7 +164,7 @@ const workExperiences = {
       role: "Software Engineer",
       company: "Wells Fargo",
       companylogo: require("./assets/images/wf-logo.png"),
-      date: "September 2022 – Present",
+      date: "August 2022 – Present",
       descBullets: [
         "Received Manager Appreciation Spotlight award in September 2024.",
         "Contributed on building the JAVA - React document viewing tool and on-boarded 250+ Doc Classes onto the new application.",
@@ -176,7 +176,7 @@ const workExperiences = {
       role: "Intern",
       company: "Bharat Electronics Limited",
       companylogo: require("./assets/images/bel-logo.png"),
-      date: "May 2017 – May 2018",
+      date: "October 2021 – November 2021",
       descBullets: [
         "Fixed a long ongoing bug in the BEL internal used web application written in ReactJS",
         "Industrial Awareness about various BEL Products."
