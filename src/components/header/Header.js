@@ -62,6 +62,7 @@ function Header() {
               <a
                 href="https://drive.google.com/file/d/118ChVmXQejDaAYfXqq0_hqqbtRrdxUE2/view"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Resume
               </a>
