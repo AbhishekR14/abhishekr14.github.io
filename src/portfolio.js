@@ -21,10 +21,10 @@ const greeting = {
   username: "Abhishek Ranjan",
   title: "Hi, I'm Abhishek",
   subTitle: emoji(
-    "I am a passionate Full Stack Developer 🚀 with expertise in Java, .NET, and the MERN stack. With 3 years of professional experience, I specialize in building scalable and high-performance web applications using Java, .NET, React.js, Node.js, and other modern libraries and frameworks."
+    "I am a passionate Full Stack Developer 🚀 with expertise in building scalable applications across Java, .NET, React, and cloud ecosystems. Passionate about backend systems, intuitive UI development, and AI-assisted development workflows with strong prompting skills. Quick to adapt to new technologies with a strong focus on performance, clean architecture, and problem-solving."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1XdW2NGvHt0PWsPywwNlOmtmPnHQ9fDOx/view", // Set to empty to hide the button
+    "https://drive.google.com/file/d/118ChVmXQejDaAYfXqq0_hqqbtRrdxUE2/view", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -55,79 +55,25 @@ const skillsSection = {
       "⚡ I have good knowledge of how to work with a large scale application"
     )
   ],
-
-  /* Make Sure to include correct Font Awesome Classname to view your icon
-https://fontawesome.com/icons?d=gallery */
-
   softwareSkills: [
-    {
-      skillName: "Java",
-      fontAwesomeClassname: "fab fa-java"
-    },
-    {
-      skillName: ".NET",
-      fontAwesomeClassname: "fas fa-code"
-    },
-    {
-      skillName: "React.Js",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
-      skillName: "Node.Js",
-      fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "SpringBoot",
-      fontAwesomeClassname: "fas fa-leaf"
-    },
-    {
-      skillName: "C#",
-      fontAwesomeClassname: "fas fa-laptop-code"
-    },
-    {
-      skillName: "Next.Js",
-      fontAwesomeClassname: "fas fa-layer-group"
-    },
-    {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
-    },
-    {
-      skillName: "Azure",
-      fontAwesomeClassname: "fab fa-microsoft"
-    },
-    {
-      skillName: "SQL",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
-      skillName: "PostGresSQL",
-      fontAwesomeClassname: "fas fa-paw"
-    },
-    {
-      skillName: "NoSQL",
-      fontAwesomeClassname: "fas fa-server"
-    },
-    {
-      skillName: "MongoDB",
-      fontAwesomeClassname: "fas fa-leaf"
-    },
-    {
-      skillName: "TailwindCSS",
-      fontAwesomeClassname: "fas fa-cogs"
-    },
-    {
-      skillName: "TypeScript",
-      fontAwesomeClassname: "fas fa-puzzle-piece"
-    },
-    {
-      skillName: "python",
-      fontAwesomeClassname: "fab fa-python"
-    },
-    {
-      skillName: "C++",
-      fontAwesomeClassname: "fas fa-terminal"
-    }
+    { skillName: "Java", fontAwesomeClassname: "fab fa-java" },
+    { skillName: ".NET", fontAwesomeClassname: "fas fa-code" },
+    { skillName: "React.Js", fontAwesomeClassname: "fab fa-react" },
+    { skillName: "Node.Js", fontAwesomeClassname: "fab fa-node" },
+    { skillName: "SpringBoot", fontAwesomeClassname: "fas fa-leaf" },
+    { skillName: "C#", fontAwesomeClassname: "fas fa-laptop-code" },
+    { skillName: "Next.Js", fontAwesomeClassname: "fas fa-layer-group" },
+    { skillName: "JavaScript", fontAwesomeClassname: "fab fa-js" },
+    { skillName: "TypeScript", fontAwesomeClassname: "fas fa-puzzle-piece" },
+    { skillName: "Python", fontAwesomeClassname: "fab fa-python" },
+    { skillName: "SQL", fontAwesomeClassname: "fas fa-database" },
+    { skillName: "Postgres", fontAwesomeClassname: "fas fa-paw" },
+    { skillName: "NoSQL", fontAwesomeClassname: "fas fa-server" },
+    { skillName: "MongoDB", fontAwesomeClassname: "fas fa-leaf" },
+    { skillName: "Kubernetes", fontAwesomeClassname: "fas fa-cubes" },
+    { skillName: "Azure", fontAwesomeClassname: "fab fa-microsoft" },
+    { skillName: "Kafka", fontAwesomeClassname: "fas fa-stream" },
+    { skillName: "TailwindCSS", fontAwesomeClassname: "fas fa-cogs" }
   ],
   display: true
 };
@@ -156,20 +102,32 @@ const educationInfo = {
 };
 
 // Work experience section
-
 const workExperiences = {
-  display: true, //Set it to true to show workExperiences Section
+  display: true, // Set it to true to show workExperiences Section
   experience: [
+    {
+      role: "Associate Software Engineer (SDE 2)",
+      company: "Goldman Sachs",
+      companylogo: require("./assets/images/gs-logo.png"), // Add the logo image to assets/images
+      date: "June 2025 – Present",
+      descBullets: [
+        "Successfully led end-to-end migration of multiple microservices from JDK 8/SpringBoot 2 to JDK 21/SpringBoot 3, improving performance, security, and maintainability across On-prem and Kubernetes deployments.",
+        "Architected and developed a full-stack Exceptions Management UI with an integrated approval workflow, replacing a high-effort legacy manual process. This automation reduced operational overhead and improved data tracking for auditing.",
+        "Contributed to a high-throughput trade surveillance system, onboarding Physical Equities and validating trades against regulatory and internal compliance rules.",
+        "Designed and implemented an MCP (Model Context Protocol) server to enable business users to interact directly with backend capabilities via a conversational interface, removing dependency on UI layers.",
+        "Improved system resilience through multi-cluster QA setups, failover testing, and monitoring with Prometheus and Alertmanager."
+      ]
+    },
     {
       role: "Software Engineer",
       company: "Wells Fargo",
       companylogo: require("./assets/images/wf-logo.png"),
-      date: "August 2022 – Present",
+      date: "August 2022 – June 2025",
       descBullets: [
-        "Received Manager Appreciation Spotlight award in September 2024.",
-        "Contributed on building the JAVA - React document viewing tool and on-boarded 250+ Doc Classes onto the new application.",
-        "Managed a .NET web application, a Wells Fargo Document Viewing tool to view all the stored documents.Decommissioned the .NET document viewing tool and Migrated the entire functionality to the new document viewing tool written in JAVA-React.",
-        "Created an in-house .NET application that would reduce/remove dependency on a third-party software (ION Trading). Hence saving the $100K paid for the ION Trading software."
+        "Received Manager Appreciation Spotlight award on September 2024.",
+        "Contributed on building the JAVA - React document viewing tool and on-boarded 250+ Doc Classes on new application.",
+        "Managed a .NET document viewing tool, a Wells Fargo Document Viewing tool to view all the stored documents. Decommissioned it and migrated full functionality to the new JAVA-React tool.",
+        "Created an in-house .NET application reducing dependency on a third-party tool - ION Trading software, saving $100K annually."
       ]
     },
     {
@@ -178,8 +136,7 @@ const workExperiences = {
       companylogo: require("./assets/images/bel-logo.png"),
       date: "October 2021 – November 2021",
       descBullets: [
-        "Fixed a long ongoing bug in the BEL internal used web application written in ReactJS",
-        "Industrial Awareness about various BEL Products."
+        "Fixed a long ongoing bug in the BEL internal used web application written in ReactJS."
       ]
     }
   ]
