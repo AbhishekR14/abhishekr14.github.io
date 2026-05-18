@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React from "react";
 import "./Footer.scss";
 import {Fade} from "react-reveal";
 
