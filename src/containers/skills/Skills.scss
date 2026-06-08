@@ -23,6 +23,18 @@
 .skills-heading {
   font-size: 56px;
   font-weight: 400;
+  border-left: 4px solid $buttonColor;
+  padding-left: 0.6rem;
+}
+
+#skills {
+  background-color: $lightBackground4;
+  border-radius: 16px;
+}
+
+#skills.dark-mode,
+.dark-mode #skills {
+  background-color: #1d2236;
 }
 .subTitle {
   color: $subTitle;

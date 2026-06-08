@@ -1,7 +1,11 @@
+@import "../../_globalColor";
+
 .project-title {
   font-size: 52px;
   font-weight: 400;
   line-height: normal;
+  border-left: 4px solid $buttonColor;
+  padding-left: 0.6rem;
 }
 
 .repo-cards-div-main {

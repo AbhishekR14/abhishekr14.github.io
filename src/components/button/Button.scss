@@ -1,8 +1,8 @@
 @import "../../_globalColor";
 
 .main-button {
-  background-color: $buttonColor;
-  border: solid 1px $buttonColor;
+  background: linear-gradient(135deg, #55198b 0%, #7b2fbe 60%, #8c43ce 100%);
+  border: none;
   color: $textColorDark;
   font-weight: 700;
   width: max-content;
@@ -15,14 +15,17 @@
   display: block;
   margin-top: 20px;
   font-size: 1rem;
+  letter-spacing: 0.05em;
   cursor: pointer;
+  box-shadow: 0 4px 15px rgba(85, 25, 139, 0.35);
   transition: all 0.3s ease-in-out 0s;
 }
 .main-button:hover {
-  background-color: $darkBoxShadow2;
-  color: $buttonColor;
-  transition: all 0.3s ease 0s;
+  background: linear-gradient(135deg, #7b2fbe 0%, #9b4de0 100%);
+  color: $textColorDark;
+  box-shadow: 0 6px 20px rgba(85, 25, 139, 0.5);
   transform: translateY(-3px);
+  transition: all 0.3s ease 0s;
 }
 .project-button {
   display: flex;

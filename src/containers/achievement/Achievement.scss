@@ -5,6 +5,18 @@
   font-weight: 400;
   line-height: normal;
   margin: 0px;
+  border-left: 4px solid $buttonColor;
+  padding-left: 0.6rem;
+}
+
+#achievements {
+  background-color: $lightBackground4;
+  border-radius: 16px;
+}
+
+#achievements.dark-mode,
+.dark-mode #achievements {
+  background-color: #1d2236;
 }
 .achievement-subtitle {
   margin: 0px;

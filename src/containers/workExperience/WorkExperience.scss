@@ -4,9 +4,13 @@
   gap: 1rem 1rem;
 }
 
+@import "../../_globalColor";
+
 .experience-heading {
   font-size: 56px;
   font-weight: 400;
+  border-left: 4px solid $buttonColor;
+  padding-left: 0.6rem;
 }
 
 .experience-container {

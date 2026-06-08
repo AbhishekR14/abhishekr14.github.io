@@ -1,6 +1,20 @@
+@import "../../_globalColor";
+
 .education-heading {
   font-size: 56px;
   font-weight: 400;
+  border-left: 4px solid $buttonColor;
+  padding-left: 0.6rem;
+}
+
+.education-section {
+  background-color: $lightBackground4;
+  border-radius: 16px;
+  padding: 20px 30px;
+}
+
+.dark-mode .education-section {
+  background-color: #1d2236;
 }
 
 .education-section {
