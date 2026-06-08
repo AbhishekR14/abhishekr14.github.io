@@ -21,7 +21,7 @@ const greeting = {
   username: "Abhishek Ranjan",
   title: "Hi, I'm Abhishek",
   subTitle: emoji(
-    "I am a passionate Full Stack Developer 🚀 with expertise in building scalable applications across Java, .NET, React, and cloud ecosystems. Passionate about backend systems, intuitive UI development, and AI-assisted development workflows with strong prompting skills. Quick to adapt to new technologies with a strong focus on performance, clean architecture, and problem-solving."
+    "Full Stack AI Engineer 🚀 with 4 years of experience building intelligent, end-to-end applications integrating LLMs, AI agents, and modern web stacks (React, Next.js, Spring Boot). Shipped an MCP server at Goldman Sachs enabling natural-language access to backend systems. Fluent across the full stack — from REST APIs and microservices to React UIs and AI-augmented workflows — with a strong focus on scalable architecture and production reliability."
   ),
   resumeLink:
     "https://drive.google.com/file/d/118ChVmXQejDaAYfXqq0_hqqbtRrdxUE2/view", // Set to empty to hide the button
@@ -44,15 +44,15 @@ const socialMediaLinks = {
 const skillsSection = {
   title: "What I do",
   subTitle:
-    "A Tech-Savvy Full Stack Developer who is tech stack flexible. I am very enthusiastic about learning new technologies and building impactful projects.",
+    "A Full Stack AI Engineer who builds intelligent, end-to-end applications integrating LLMs, AI agents, and modern web stacks. Tech-stack flexible with a passion for scalable architecture and production reliability.",
   skills: [
-    emoji("⚡ I Develop highly interactive web applications"),
+    emoji("⚡ Build and ship AI-augmented applications using LLMs, MCP servers, and RAG pipelines"),
+    emoji("⚡ Develop full-stack web applications with React, Next.js, Spring Boot, and Node.js"),
     emoji(
-      "⚡ I Seamlessly Integrate third party services like Firebase, Azure, Vercel, CloudFlare, etc"
+      "⚡ Design and migrate microservices on Kubernetes and cloud platforms like Azure"
     ),
-    emoji("⚡ I am Very tech fluid and write clean code"),
     emoji(
-      "⚡ I have good knowledge of how to work with a large scale application"
+      "⚡ Integrate third-party services like Firebase, Azure, Vercel, Kafka, and Prometheus"
     )
   ],
   softwareSkills: [
@@ -73,7 +73,11 @@ const skillsSection = {
     { skillName: "Kubernetes", fontAwesomeClassname: "fas fa-cubes" },
     { skillName: "Azure", fontAwesomeClassname: "fab fa-microsoft" },
     { skillName: "Kafka", fontAwesomeClassname: "fas fa-stream" },
-    { skillName: "TailwindCSS", fontAwesomeClassname: "fas fa-cogs" }
+    { skillName: "TailwindCSS", fontAwesomeClassname: "fas fa-cogs" },
+    { skillName: "LLMs", fontAwesomeClassname: "fas fa-brain" },
+    { skillName: "AI Agents", fontAwesomeClassname: "fas fa-robot" },
+    { skillName: "MCP", fontAwesomeClassname: "fas fa-plug" },
+    { skillName: "RAG", fontAwesomeClassname: "fas fa-search" }
   ],
   display: true
 };
@@ -88,7 +92,7 @@ const educationInfo = {
       logo: require("./assets/images/Pes-University-logo.png"),
       subHeader:
         "Bachelor of Technology in Electronics and Communication Engineering",
-      duration: "June 2016 - June 2022",
+      duration: "June 2018 – June 2022",
       desc: "CGPA - 8.28"
     },
     {
