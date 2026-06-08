@@ -3,51 +3,24 @@
 .main {
   width: 90%;
   padding: 20px 10px;
-  margin: 0px auto;
+  margin: 0 auto;
   margin-top: 4rem;
 }
+
 .greet-main {
   width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
+  padding: 40px 10px 60px;
+  margin: 0 auto;
   margin-top: 2rem;
   position: relative;
 }
 
-.greet-main::before {
-  content: "";
-  position: absolute;
-  top: -10%;
-  right: -5%;
-  width: 55%;
-  height: 120%;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(140, 67, 206, 0.12) 0%,
-    rgba(85, 25, 139, 0.06) 50%,
-    transparent 70%
-  );
-  pointer-events: none;
-  z-index: 0;
-}
-
-.dark-mode .greet-main::before {
-  background: radial-gradient(
-    ellipse at center,
-    rgba(140, 67, 206, 0.18) 0%,
-    rgba(85, 25, 139, 0.09) 50%,
-    transparent 70%
-  );
-}
-
 .greeting-main {
   display: flex;
+  align-items: center;
+  gap: 2rem;
   position: relative;
   z-index: 1;
-}
-
-.subTitle {
-  color: $subTitle !important;
 }
 
 .greeting-main > * {
@@ -55,41 +28,91 @@
   margin-bottom: 30px;
 }
 
+.subTitle {
+  color: $subTitle !important;
+}
+
 .empty-div {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
-.button-greeting-div {
-  display: flex;
-  margin-top: 40px;
-}
-.download-link-button {
-  text-decoration: none;
-  .download-icon {
-    display: none;
+/* ─── HERO BADGE ─────────────────────────────────────────── */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--purple-4, #a855f7);
+  background: rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 50px;
+  padding: 0.35rem 1rem;
+  margin-bottom: 1.5rem;
+
+  .badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--purple-4, #a855f7);
+    box-shadow: 0 0 8px var(--purple-4, #a855f7);
+    animation: badgePulse 2s ease-in-out infinite;
   }
-
-  .download-text {
-    display: inline;
-  }
 }
 
+@keyframes badgePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.85); }
+}
+
+/* ─── GREETING TEXT ──────────────────────────────────────── */
 .greeting-text {
-  font-size: 70px;
-  line-height: 1.1;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
   color: $textColor !important;
+  margin-bottom: 0.4rem;
+}
+
+.dark-mode .greeting-text {
+  color: #f1f0ff !important;
+}
+
+.dark-mode .greeting-name-highlight {
+  background: linear-gradient(135deg, #a855f7 0%, #6c63ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .greeting-text-p {
-  font-size: 30px;
-  line-height: 40px;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  line-height: 1.65;
+  color: $subTitle;
+  max-width: 500px;
+  margin-bottom: 0;
 }
 
-.greeting-image-div > img {
-  max-width: 100%;
-  height: auto;
+.dark-mode .greeting-text-p {
+  color: #9b97c4;
 }
 
+/* ─── BUTTONS ────────────────────────────────────────────── */
+.button-greeting-div {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.download-link-button {
+  text-decoration: none;
+  .download-icon { display: none; }
+  .download-text { display: inline; }
+}
+
+/* ─── WAVE EMOJI ─────────────────────────────────────────── */
 .wave-emoji {
   animation-duration: 1.8s;
   animation-iteration-count: infinite;
@@ -99,59 +122,73 @@
 }
 
 @keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(-10deg);
-  }
-  20% {
-    transform: rotate(12deg);
-  }
-  30% {
-    transform: rotate(-10deg);
-  }
-  40% {
-    transform: rotate(9deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
+  0%   { transform: rotate(0deg); }
+  10%  { transform: rotate(-10deg); }
+  20%  { transform: rotate(12deg); }
+  30%  { transform: rotate(-10deg); }
+  40%  { transform: rotate(9deg); }
+  50%  { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.greeting-image-div > img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ─── SCROLL HINT ────────────────────────────────────────── */
+.scroll-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 3rem;
+  color: var(--muted-dark, #9b97c4);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.6;
+
+  .scroll-line {
+    width: 1px;
+    height: 36px;
+    background: linear-gradient(to bottom, var(--muted-dark, #9b97c4), transparent);
+    animation: scrollDrop 1.6s ease-in-out infinite;
   }
 }
 
-/* Media Query */
+@keyframes scrollDrop {
+  0%   { transform: scaleY(0); transform-origin: top; }
+  49%  { transform: scaleY(1); transform-origin: top; }
+  50%  { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────── */
 @media (max-width: 1380px) {
   .greeting-text {
-    font-size: 50px;
+    font-size: 3.5rem;
   }
   .greeting-text-p {
-    font-size: 20px;
+    font-size: 1.1rem;
   }
 }
+
 @media (max-width: 768px) {
   .download-link-button {
-    .download-icon {
-      display: inline;
-      margin-right: 5px;
-    }
-
-    .download-text {
-      display: none;
-    }
+    .download-icon { display: inline; margin-right: 5px; }
+    .download-text { display: none; }
   }
   .button-greeting-div {
-    justify-content: space-around;
+    justify-content: center;
   }
   .greeting-text {
-    font-size: 30px;
+    font-size: 2.4rem;
     text-align: center;
   }
   .greeting-text-p {
-    font-size: 16px;
-    line-height: normal;
+    font-size: 1rem;
     text-align: center;
   }
   .greeting-main {
@@ -160,10 +197,14 @@
   .greeting-image-div {
     height: 256px;
   }
+  .hero-badge {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: fit-content;
+  }
 }
 
 @media (max-width: 320px) {
-  .main {
-    width: auto;
-  }
+  .main { width: auto; }
 }

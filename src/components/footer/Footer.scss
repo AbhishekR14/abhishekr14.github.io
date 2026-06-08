@@ -1,15 +1,27 @@
 @import "../../_globalColor";
 
-.footer-text {
-  text-align: center;
-  color: $subTitle !important;
-}
-
-.dark-mode {
-  color: $textColorDark !important;
-}
-
 .footer-div {
-  margin-top: 2rem;
-  padding-bottom: 1rem;
+  margin-top: 3rem;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  border-top: 1px solid rgba(123, 47, 190, 0.15);
+}
+
+.dark-mode .footer-div {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.footer-text {
+  color: $subTitle !important;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.dark-mode .footer-text,
+.dark-mode .footer-div * {
+  color: #9b97c4 !important;
+}
+
+.dark-mode .footer-div a:hover {
+  color: #a855f7 !important;
 }

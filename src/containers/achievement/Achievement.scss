@@ -1,44 +1,56 @@
 @import "../../_globalColor";
 
 .achievement-heading {
-  font-size: 56px;
-  font-weight: 400;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
   line-height: normal;
-  margin: 0px;
+  margin: 0;
+  color: $titleColor;
   border-left: 4px solid $buttonColor;
-  padding-left: 0.6rem;
+  padding-left: 0.75rem;
+}
+
+.dark-mode .achievement-heading {
+  color: #f1f0ff;
+  border-left-color: #a855f7;
 }
 
 #achievements {
   background-color: $lightBackground4;
-  border-radius: 16px;
+  border-radius: 20px;
 }
 
-#achievements.dark-mode,
 .dark-mode #achievements {
-  background-color: #1d2236;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
 }
+
 .achievement-subtitle {
-  margin: 0px;
-  margin-bottom: 50px;
+  margin: 0;
+  margin-bottom: 40px;
 }
+
 .subTitle {
   color: $subTitle;
 }
 
-/* Media Query */
-@media (max-width: 1380px) {
-  .achievement-heading {
-    font-size: 40px;
-  }
+.dark-mode .subTitle {
+  color: #9b97c4;
 }
+
+@media (max-width: 1380px) {
+  .achievement-heading { font-size: 2rem; }
+}
+
 @media (max-width: 768px) {
   .achievement-heading {
-    font-size: 30px;
+    font-size: 1.75rem;
     text-align: center;
   }
   .achievement-subtitle {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: normal;
     text-align: center;
   }

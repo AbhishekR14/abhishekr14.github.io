@@ -1,7 +1,7 @@
 @import "../_globalColor";
 
-.dark-mode {
+#app-root.dark-mode {
   background-color: $darkBackground;
-  color: white;
-  transition: "0.1s";
+  color: $textColorDark;
+  transition: background-color 0.3s;
 }

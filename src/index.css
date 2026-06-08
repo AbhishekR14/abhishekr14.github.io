@@ -12,44 +12,66 @@
     url("./assets/fonts/Montserrat-Regular.ttf") format("woff");
   font-display: swap;
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+
+:root {
+  --purple-1: #55198b;
+  --purple-2: #7b2fbe;
+  --purple-3: #8c43ce;
+  --purple-4: #a855f7;
+  --purple-5: #c084fc;
+  --indigo: #6c63ff;
+  --bg: #0d0d1a;
+  --bg2: #12112a;
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.10);
+  --glass-hover: rgba(255, 255, 255, 0.08);
+  --text-dark: #f1f0ff;
+  --muted-dark: #9b97c4;
+  --glow: rgba(140, 67, 206, 0.35);
 }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
 html,
 body {
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
-  font: 19px / 23px Montserrat, "Montserrat", sans-serif;
+  font-family: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #8c43ce;
+  background: var(--purple-3);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #55198b;
+  background: var(--purple-2);
 }
 html {
   scrollbar-width: thin;
-  scrollbar-color: #8c43ce transparent;
+  scrollbar-color: var(--purple-3) transparent;
 }
 
 /* Media Query */
 @media (max-width: 1380px) {
   html,
   body {
-    font-size: rem;
+    font-size: 16px;
     line-height: normal;
   }
 }

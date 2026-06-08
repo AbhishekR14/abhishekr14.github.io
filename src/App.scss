@@ -28,3 +28,119 @@
 .subTitle {
   color: $subTitle;
 }
+
+/* ─── SCROLL PROGRESS BAR ─────────────────────────────── */
+#scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--purple-2), var(--purple-4), var(--indigo));
+  z-index: 9999;
+  transition: width 0.08s linear;
+  box-shadow: 0 0 10px var(--purple-3);
+}
+
+/* ─── CURSOR GLOW ─────────────────────────────────────── */
+#cursor-glow {
+  position: fixed;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(140, 67, 206, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  transition: left 0.1s ease, top 0.1s ease;
+}
+
+/* ─── ANIMATED MESH BACKGROUND (dark mode root div only) ── */
+#app-root.dark-mode {
+  background-color: $darkBackground;
+  background-image:
+    radial-gradient(ellipse 750px 600px at -8% 12%, rgba(123, 47, 190, 0.22) 0%, transparent 55%),
+    radial-gradient(ellipse 600px 500px at 108% 88%, rgba(108, 99, 255, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 500px 400px at 55% 48%, rgba(168, 85, 247, 0.08) 0%, transparent 60%);
+  color: $textColorDark;
+  transition: background-color 0.3s;
+}
+
+/* ─── GLASS CARD (dark mode) ────────────────────────────── */
+.dark-mode .glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 20px;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.dark-mode .glass-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(168, 85, 247, 0.35);
+  box-shadow: 0 8px 40px rgba(140, 67, 206, 0.2);
+}
+
+/* ─── SCROLL REVEAL ─────────────────────────────────────── */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger for card grids */
+.dark-mode .experience-cards-div .experience-card-dark:nth-child(2),
+.dark-mode .repo-cards-div-main > *:nth-child(2) { transition-delay: 0.1s; }
+.dark-mode .experience-cards-div .experience-card-dark:nth-child(3),
+.dark-mode .repo-cards-div-main > *:nth-child(3) { transition-delay: 0.2s; }
+.dark-mode .experience-cards-div .experience-card-dark:nth-child(4),
+.dark-mode .repo-cards-div-main > *:nth-child(4) { transition-delay: 0.3s; }
+
+/* ─── SECTION HEADING SYSTEM ─────────────────────────────── */
+.dark-mode .section-title-modern {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #f1f0ff 0%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-left: none !important;
+}
+
+/* ─── SECTION TAG PILL ───────────────────────────────────── */
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--purple-4);
+  background: rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 50px;
+  padding: 0.3rem 0.9rem;
+  margin-bottom: 1rem;
+  &::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--purple-4);
+    box-shadow: 0 0 6px var(--purple-4);
+  }
+}
+
+/* ─── GRADIENT TEXT HELPER ───────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, var(--purple-4), var(--indigo));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

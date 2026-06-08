@@ -20,10 +20,15 @@ export default function Greeting() {
         <div className="greeting-main">
           <div className="greeting-text-div">
             <div>
+              {isDark && (
+                <div className="hero-badge">
+                  <span className="badge-dot" />
+                  Open to opportunities
+                </div>
+              )}
               <h1
                 className={isDark ? "dark-mode greeting-text" : "greeting-text"}
               >
-                {" "}
                 {greeting.title}{" "}
                 <span className="wave-emoji">{emoji("👋")}</span>
               </h1>
@@ -41,28 +46,24 @@ export default function Greeting() {
               <div className="button-greeting-div">
                 <Button text="Contact me" href="#contact" />
                 {greeting.resumeLink && (
-                  <a
-                    href={greeting.resumeLink} // Ensure this links to the correct resume URL
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Button
+                    text={
+                      <>
+                        <span
+                          className="download-icon"
+                          role="img"
+                          aria-label="Download"
+                        >
+                          📥
+                        </span>
+                        <span className="download-text"> View</span>
+                        <span> Resume</span>
+                      </>
+                    }
+                    href={greeting.resumeLink}
+                    newTab={true}
                     className="download-link-button"
-                  >
-                    <Button
-                      text={
-                        <>
-                          <span
-                            className="download-icon"
-                            role="img"
-                            aria-label="Download"
-                          >
-                            📥
-                          </span>
-                          <span className="download-text"> View</span>
-                          <span> Resume</span>
-                        </>
-                      }
-                    />
-                  </a>
+                  />
                 )}
               </div>
             </div>

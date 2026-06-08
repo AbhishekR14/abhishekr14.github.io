@@ -32,12 +32,13 @@
 
 .education-text-school {
   margin: 0;
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  height: 27px;
+  line-height: 1.3;
 }
 
 .education-roundedimg {
@@ -56,17 +57,30 @@
 .education-text-subHeader {
   color: $textColor;
   font-weight: 700;
-  font-size: 19px;
-  margin: 0px;
-  padding-top: 0.8rem;
-  line-height: normal;
+  font-size: 1rem;
+  margin: 0;
+  padding-top: 0.6rem;
+  line-height: 1.4;
 }
 
 .education-text-duration {
-  color: $titleColor;
-  font-size: 19px;
-  margin: 0px;
-  padding-top: 0.5rem;
+  color: $subTitle;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0;
+  padding-top: 0.3rem;
+}
+
+.dark-mode .education-text-subHeader {
+  color: #f1f0ff;
+}
+
+.dark-mode .education-text-duration {
+  color: #a855f7;
+}
+
+.dark-mode .education-text-school {
+  color: #f1f0ff;
 }
 
 .education-text-desc {

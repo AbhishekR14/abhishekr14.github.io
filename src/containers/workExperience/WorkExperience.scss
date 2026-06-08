@@ -1,23 +1,31 @@
 .experience-cards-div {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 1rem 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
 }
 
 @import "../../_globalColor";
 
 .experience-heading {
-  font-size: 56px;
-  font-weight: 400;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: $titleColor;
   border-left: 4px solid $buttonColor;
-  padding-left: 0.6rem;
+  padding-left: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.dark-mode .experience-heading {
+  color: #f1f0ff;
+  border-left-color: #a855f7;
 }
 
 .experience-container {
   display: flex;
   width: 90%;
   padding: 20px 10px;
-  margin: 0px auto;
+  margin: 0 auto;
   margin-top: 2rem;
 }
 
@@ -25,17 +33,10 @@
   flex: 1;
 }
 
-/* Media Query */
-
 @media (max-width: 1380px) {
-  .experience-heading {
-    font-size: 40px;
-  }
+  .experience-heading { font-size: 2rem; }
 }
 
 @media (max-width: 768px) {
-  .experience-heading {
-    font-size: 30px;
-    text-align: center;
-  }
+  .experience-heading { font-size: 1.75rem; text-align: center; }
 }
