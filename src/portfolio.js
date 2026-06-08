@@ -21,7 +21,7 @@ const greeting = {
   username: "Abhishek Ranjan",
   title: "Hi, I'm Abhishek",
   subTitle: emoji(
-    "Full Stack AI Engineer 🚀 with 4 years of experience building intelligent, end-to-end applications integrating LLMs, AI agents, and modern web stacks (React, Next.js, Spring Boot). Shipped an MCP server at Goldman Sachs enabling natural-language access to backend systems. Fluent across the full stack — from REST APIs and microservices to React UIs and AI-augmented workflows — with a strong focus on scalable architecture and production reliability."
+    "Full Stack AI Engineer 🚀 with 4 years of experience building intelligent, end-to-end applications integrating LLMs, AI agents, and modern web stacks (React, Next.js, Spring Boot). Shipped an MCP server at Goldman Sachs enabling natural-language access to backend systems. Fluent across the full stack from REST APIs and microservices to React UIs and AI-augmented workflows with a strong focus on scalable architecture and production reliability."
   ),
   resumeLink:
     "https://drive.google.com/file/d/118ChVmXQejDaAYfXqq0_hqqbtRrdxUE2/view", // Set to empty to hide the button
