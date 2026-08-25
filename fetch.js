@@ -7,15 +7,26 @@ const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
 const USERNAME_GITHUB = process.env.USERNAME_GITHUB;
 const USE_GITHUB_DATA = process.env.USE_GITHUB_DATA;
 
-const ERR = {
-  noUserName:
-    "Github Username was found to be undefined. Please set all relevant environment variables.",
-  requestFailed:
-    "The request to GitHub didn't succeed. Check if GitHub token in your .env file is correct."
-};
+/**
+ * This data is optional decoration — it fills the GitHub profile card and the
+ * pinned-repo list. src/containers/profile/Profile.js already handles a missing
+ * public/profile.json by hiding that section, so a failed fetch must NOT fail
+ * the build. It used to `throw`, which killed `npm run build` (and therefore the
+ * whole Vercel deploy) whenever the token was missing, expired, or GitHub was
+ * having a bad day.
+ */
+function skip(reason) {
+  console.warn(`[fetch] Skipping GitHub profile data: ${reason}`);
+  console.warn(
+    "[fetch] This is not fatal. The site builds and deploys fine; the GitHub " +
+      "profile card falls back to the default contact section."
+  );
+}
+
 if (USE_GITHUB_DATA === "true") {
   if (USERNAME_GITHUB === undefined) {
-    throw new Error(ERR.noUserName);
+    skip("USERNAME_GITHUB is not set.");
+    return;
   }
 
   console.log(`Fetching profile data for ${USERNAME_GITHUB}`);
@@ -69,7 +80,13 @@ if (USE_GITHUB_DATA === "true") {
 
     console.log(`statusCode: ${res.statusCode}`);
     if (res.statusCode !== 200) {
-      throw new Error(ERR.requestFailed);
+      // Drain the response so the socket closes, then carry on.
+      res.resume();
+      skip(
+        `GitHub returned ${res.statusCode}. Check REACT_APP_GITHUB_TOKEN, or ` +
+          `set USE_GITHUB_DATA=false to turn this off entirely.`
+      );
+      return;
     }
 
     res.on("data", d => {
@@ -84,7 +101,7 @@ if (USE_GITHUB_DATA === "true") {
   });
 
   req.on("error", error => {
-    throw error;
+    skip(`could not reach GitHub (${error.message}).`);
   });
 
   req.write(data);
