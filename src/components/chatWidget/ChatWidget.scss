@@ -617,10 +617,17 @@ $chatMuted: $githubRepoCardColor; // rgb(155, 151, 196)
     gap: 8px;
   }
 
+  /* `gap` and `justify-content` must be repeated here. The rule above is the
+     same specificity and comes later in the cascade than the desktop
+     --open/--compact rules, so it would otherwise reinstate the 8px gap - and
+     the zero-width label is still a flex item, so that gap shifts the icon 4px
+     off centre. */
   .chat-widget__trigger--open,
   .chat-widget__trigger--compact {
     width: 54px;
     padding: 0;
+    gap: 0;
+    justify-content: center;
   }
 
   .chat-widget__nudge {

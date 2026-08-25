@@ -24,7 +24,17 @@ export default function Projects() {
           throw result;
         })
         .then(response => {
-          setrepoFunction(response.data.user.pinnedItems.edges);
+          /* GitHub can answer 200 with null nodes for repos the token may not
+             read. Filter them here too: fetch.js already strips them at build
+             time, but a stale profile.json must not be able to blank the page. */
+          const edges =
+            (response &&
+              response.data &&
+              response.data.user &&
+              response.data.user.pinnedItems &&
+              response.data.user.pinnedItems.edges) ||
+            [];
+          setrepoFunction(edges.filter(edge => edge && edge.node));
         })
         .catch(function (error) {
           console.error(
@@ -48,16 +58,9 @@ export default function Projects() {
         <div className="main" id="personalproject">
           <h1 className="project-title">Personal Projects</h1>
           <div className="repo-cards-div-main">
-            {repo.map((v, i) => {
-              if (!v) {
-                console.error(
-                  `Github Object for repository number : ${i} is undefined`
-                );
-              }
-              return (
-                <GithubRepoCard repo={v} key={v.node.id} isDark={isDark} />
-              );
-            })}
+            {repo.map(v => (
+              <GithubRepoCard repo={v} key={v.node.id} isDark={isDark} />
+            ))}
           </div>
           <Button
             text={"More Projects"}
