@@ -24,7 +24,7 @@ const greeting = {
     "Full Stack AI Engineer 🚀 with 4 years of experience building intelligent, end-to-end applications integrating LLMs, AI agents, and modern web stacks (React, Next.js, Spring Boot). Shipped an MCP server at Goldman Sachs enabling natural-language access to backend systems. Fluent across the full stack from REST APIs and microservices to React UIs and AI-augmented workflows with a strong focus on scalable architecture and production reliability."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/118ChVmXQejDaAYfXqq0_hqqbtRrdxUE2/view", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1ClC7qllYaMbgfuJucK6h5T2Oa5QnY_GI/view", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -115,10 +115,10 @@ const workExperiences = {
       companylogo: require("./assets/images/gs-logo.png"), // Add the logo image to assets/images
       date: "June 2025 – Present",
       descBullets: [
+        "Designed and implemented an MCP (Model Context Protocol) server to enable business users to interact directly with backend capabilities via a conversational interface, removing dependency on UI layers.",
         "Successfully led end-to-end migration of multiple microservices from JDK 8/SpringBoot 2 to JDK 21/SpringBoot 3, improving performance, security, and maintainability across On-prem and Kubernetes deployments.",
         "Architected and developed a full-stack Exceptions Management UI with an integrated approval workflow, replacing a high-effort legacy manual process. This automation reduced operational overhead and improved data tracking for auditing.",
         "Contributed to a high-throughput trade surveillance system, onboarding Physical Equities and validating trades against regulatory and internal compliance rules.",
-        "Designed and implemented an MCP (Model Context Protocol) server to enable business users to interact directly with backend capabilities via a conversational interface, removing dependency on UI layers.",
         "Improved system resilience through multi-cluster QA setups, failover testing, and monitoring with Prometheus and Alertmanager."
       ]
     },

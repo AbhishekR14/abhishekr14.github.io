@@ -60,7 +60,7 @@ function Header() {
           {viewResume && (
             <li>
               <a
-                href="https://drive.google.com/file/d/118ChVmXQejDaAYfXqq0_hqqbtRrdxUE2/view"
+                href="https://drive.google.com/file/d/1ClC7qllYaMbgfuJucK6h5T2Oa5QnY_GI/view"
                 target="_blank"
                 rel="noopener noreferrer"
               >
