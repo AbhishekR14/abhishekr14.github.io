@@ -31,8 +31,8 @@
 }
 
 .dark-mode .skills-heading {
-  color: #f1f0ff;
-  border-left-color: #a855f7;
+  color: $textColorDark;
+  border-left-color: $brandAccent;
 }
 
 #skills {
@@ -52,7 +52,7 @@
 }
 
 .dark-mode .subTitle {
-  color: #9b97c4;
+  color: $textMutedDark;
 }
 
 /* Media Query */

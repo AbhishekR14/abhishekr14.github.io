@@ -43,9 +43,9 @@
   gap: 0.5rem;
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--purple-4, #a855f7);
-  background: rgba(168, 85, 247, 0.1);
-  border: 1px solid rgba(168, 85, 247, 0.25);
+  color: $brandAccent;
+  background: rgba($brandAccent, 0.1);
+  border: 1px solid rgba($brandAccent, 0.25);
   border-radius: 50px;
   padding: 0.35rem 1rem;
   margin-bottom: 1.5rem;
@@ -54,8 +54,8 @@
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: var(--purple-4, #a855f7);
-    box-shadow: 0 0 8px var(--purple-4, #a855f7);
+    background: $brandAccent;
+    box-shadow: 0 0 8px $brandAccent;
     animation: badgePulse 2s ease-in-out infinite;
   }
 }
@@ -76,11 +76,11 @@
 }
 
 .dark-mode .greeting-text {
-  color: #f1f0ff !important;
+  color: $textColorDark !important;
 }
 
 .dark-mode .greeting-name-highlight {
-  background: linear-gradient(135deg, #a855f7 0%, #6c63ff 100%);
+  background: linear-gradient(135deg, $brandAccent 0%, $brandAlt 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -95,7 +95,7 @@
 }
 
 .dark-mode .greeting-text-p {
-  color: #9b97c4;
+  color: $textMutedDark;
 }
 
 /* ─── BUTTONS ────────────────────────────────────────────── */
@@ -143,7 +143,7 @@
   align-items: center;
   gap: 0.4rem;
   margin-top: 3rem;
-  color: var(--muted-dark, #9b97c4);
+  color: $textMutedDark;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -153,7 +153,7 @@
   .scroll-line {
     width: 1px;
     height: 36px;
-    background: linear-gradient(to bottom, var(--muted-dark, #9b97c4), transparent);
+    background: linear-gradient(to bottom, $textMutedDark, transparent);
     animation: scrollDrop 1.6s ease-in-out infinite;
   }
 }

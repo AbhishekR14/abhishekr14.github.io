@@ -7,7 +7,7 @@ Bengaluru, Karnataka | +91-8880796319 | aranjan0288@gmail.com |
 
 ## Summary
 
-Full Stack AI Engineer with 4 years of experience building intelligent, end-to-end
+Full Stack Engineer with 4 years of experience building intelligent, end-to-end
 applications integrating LLMs, AI agents, and modern web stacks (React, Next.js,
 Spring Boot). Shipped an MCP server at Goldman Sachs enabling natural-language access
 to backend systems. Fluent across the full stack - from REST APIs and microservices to

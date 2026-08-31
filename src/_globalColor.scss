@@ -1,86 +1,109 @@
-/* Change colors in this file to style to your needs on a global level.
-Certain colors are used for different and multiply types of elements.
-For greater control over colors visit each components .scss file. */
+/* ─── BRAND RAMP ─────────────────────────────────────────── */
+$brandDeep: #0b3a8f; // darkest; opens the button and header gradients
+$brandPrimary: #1a5fd6; // buttons, section rules, nav icon, light-theme accents
+$brandMid: #2f7ef0; // gradient midpoints, scrollbar thumb
+$brandAccent: #4da3ff; // links and every dark-theme accent
+$brandLight: #93c5fd; // tail of the gradient-text ramp
+$brandAlt: #5b8def; // companion hue for the two-tone gradients
 
-// button colors
-$buttonColor: #7b2fbe;
-$buttonHover: #a855f7;
-$topButtonHover: #a855f7;
+/* ─── NEUTRALS ───────────────────────────────────────────── */
+// dark theme
+$darkBackground: #070d1c;
+$darkSurface: #0c162e; // chat panel, composer, counter
+$darkSurfaceRaised: #13203f; // chat nudge bubble
+$textColorDark: #eaf2ff;
+$textMutedDark: #93a6c8;
 
-// text colors light theme
-$titleColor: #1a1040;
-$textColor: #1a1040;
-$subTitle: #6b6b8a;
-$cardSubtitle: #6b6b8a;
-
-// text color dark theme
-$textColorDark: #f1f0ff;
-
-// toggle switch colors
-$toggleCheck: #a855f7;
-$toggleSwitchSliderBG: #3d3558;
-
-// githubRepo specific colors
-$githubRepoCardLanguageColorBG: #7b2fbe;
-$githubRepoCardColor: rgb(155, 151, 196);
-$githubRepoCardRepoCardStatsColor: rgb(155, 151, 196);
-$githubRepoCardRepoNameColor: #f1f0ff;
-$githubProfileCardLocationTS: #c084fc;
-$githubProfileCardBorder: #6c63ff;
-
-// light background colors
+// light theme
+$titleColor: #0a1b3d;
+$textColor: #0a1b3d;
+$subTitle: #5b7391;
+$cardSubtitle: #5b7391;
 $lightBackground1: #ffffff;
-$lightBackground2: #faf8ff;
-$lightBackground3: #f0ecf8;
-// dark background colors
-$darkBackground: #0d0d1a;
+$lightBackground2: #f7faff;
+$lightBackground3: #eaf1fa;
+$lightBackground4: #eff5ff; // alternating section background
 
-// light theme box shadows
-$lightBoxShadowDark: rgba(123, 47, 190, 0.15);
-$lightBoxShadow: rgba(123, 47, 190, 0.08);
+// error states - deliberately outside the brand ramp so they stay legible as a
+// warning colour whatever the brand hue is.
+$errorText: #b4232a;
+$errorTextDark: #ff9d9d;
+$errorTint: #d43f3f;
+
+/* ─── SEMANTIC ALIASES ───────────────────────────────────── */
+// buttons
+$buttonColor: $brandPrimary;
+$buttonHover: $brandAccent;
+$topButtonHover: $brandAccent;
+
+// toggle switch
+$toggleCheck: $brandAccent;
+$toggleSwitchSliderBG: #2c4160;
+
+// github cards
+$githubRepoCardLanguageColorBG: $brandPrimary;
+$githubRepoCardColor: $textMutedDark;
+$githubRepoCardRepoCardStatsColor: $textMutedDark;
+$githubRepoCardRepoNameColor: $textColorDark;
+$githubProfileCardLocationTS: $brandLight;
+$githubProfileCardBorder: $brandAlt;
+
+// box shadows
+$lightBoxShadowDark: rgba($brandPrimary, 0.15);
+$lightBoxShadow: rgba($brandPrimary, 0.08);
 $lightBoxShadowDarker: rgba(0, 0, 0, 0.25);
+$darkBoxShadow2: rgba(255, 255, 255, 0.1);
 
-// dark theme box shadows
-$darkBoxShadow: rgba(168, 85, 247, 0.3);
-$darkBoxShadow2: rgba(255,255,255,0.1);
+// glass surfaces (dark theme)
+$glassBG: rgba(255, 255, 255, 0.05);
+$glassBGHover: rgba(255, 255, 255, 0.08);
+$glassBorder: rgba(255, 255, 255, 0.1);
+$glassPanelBG: rgba(255, 255, 255, 0.03);
+$glassPanelBorder: rgba(255, 255, 255, 0.07);
+$cardShadowDark: 0 4px 24px rgba(0, 0, 0, 0.3);
+
+// card hover accents (dark theme)
+$cardHoverBorder: rgba($brandAccent, 0.35);
+$cardHoverGlow: rgba($brandMid, 0.25);
 
 // linear gradients
+$brandGradient: linear-gradient(
+  135deg,
+  $brandDeep 0%,
+  $brandPrimary 60%,
+  $brandMid 100%
+);
+$brandGradientHover: linear-gradient(135deg, $brandPrimary 0%, $brandAccent 100%);
+$brandGradientShort: linear-gradient(135deg, $brandPrimary 0%, $brandMid 100%);
 $experienceCardBlurredDivLG: linear-gradient(
-  rgba(13, 13, 26, 0.6),
-  rgba(13, 13, 26, 0.3)
+  rgba($darkBackground, 0.6),
+  rgba($darkBackground, 0.3)
 );
 $experienceCardBannerLG: linear-gradient(
   135deg,
-  rgba(85, 25, 139, 0.8),
-  rgba(108, 99, 255, 0.6)
+  rgba($brandDeep, 0.85),
+  rgba($brandAlt, 0.65)
 );
 
 // borders
-$progressBarBackground: rgba(168, 85, 247, 0.15);
-$lightBorder1: rgba(168, 85, 247, 0.15);
-$educationCardBorder: #7b2fbe;
+$lightBorder1: rgba($brandAccent, 0.15);
+$educationCardBorder: $brandPrimary;
 
 // hovers
-$achievementCertificateCardHoverDark: rgba(168, 85, 247, 0.12);
-$headerHoverBG: rgba(168, 85, 247, 0.08);
-$contactDetailHoverTS: #a855f7;
+$headerHoverBG: rgba($brandAccent, 0.08);
+$contactDetailHoverTS: $brandAccent;
 
-// misc backgrounds
-$progressBarSpanBG: #a855f7;
-$iconBackground: #7b2fbe;
-$appHeaderBG: #0d0d1a;
+// misc
+$iconBackground: $brandPrimary;
+$appHeaderBG: $darkBackground;
+$skillsColor: $brandAccent;
+$appLink: $brandAccent;
 
-// section background alternation
-$lightBackground4: #f5f0ff;
-
-// misc colors
-$skillsColor: #a855f7;
-$appLink: #a855f7;
-
-// social media icons
+// social media brand colours - these belong to the platforms, not to us, so
+// they never track the site palette.
 $faceBook: #3b5998;
 $linkedin: #0e76a8;
-$github: #a855f7;
+$github: $brandAccent;
 $google: #ea4335;
 $twitter: #1da1f2;
 $instagram: #c13584;

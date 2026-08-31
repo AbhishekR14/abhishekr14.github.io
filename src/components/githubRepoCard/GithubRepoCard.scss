@@ -3,8 +3,8 @@
 .repo-card-div {
   color: $githubRepoCardColor;
   background-color: $lightBackground2;
-  box-shadow: 0 4px 20px rgba(123, 47, 190, 0.08);
-  border: 1px solid rgba(123, 47, 190, 0.12);
+  box-shadow: 0 4px 20px rgba($brandPrimary, 0.08);
+  border: 1px solid rgba($brandPrimary, 0.12);
   border-radius: 16px;
   padding: 1.75rem;
   cursor: pointer;
@@ -12,8 +12,8 @@
 }
 
 .repo-card-div:hover {
-  box-shadow: 0 12px 40px rgba(123, 47, 190, 0.18);
-  border-color: rgba(168, 85, 247, 0.35);
+  box-shadow: 0 12px 40px rgba($brandPrimary, 0.18);
+  border-color: rgba($brandAccent, 0.35);
   transform: translateY(-3px);
 }
 
@@ -82,26 +82,26 @@
 .dark-card-mode {
   background: rgba(255, 255, 255, 0.05) !important;
   border: 1px solid rgba(255, 255, 255, 0.10) !important;
-  color: #9b97c4;
+  color: $textMutedDark;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3) !important;
   transition: background 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .dark-card-mode p {
-  color: #9b97c4;
+  color: $textMutedDark;
 }
 
 .dark-card-mode .repo-name {
-  color: #f1f0ff;
+  color: $textColorDark;
 }
 
 .dark-card-mode .repo-svg {
-  fill: #9b97c4;
+  fill: $textMutedDark;
 }
 
 .dark-card-mode:hover {
   background: rgba(255, 255, 255, 0.07) !important;
-  border-color: rgba(168, 85, 247, 0.35) !important;
-  box-shadow: 0 8px 40px rgba(140, 67, 206, 0.25) !important;
+  border-color: rgba($brandAccent, 0.35) !important;
+  box-shadow: 0 8px 40px rgba($brandMid, 0.25) !important;
   transform: translateY(-3px) !important;
 }

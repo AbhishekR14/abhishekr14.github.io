@@ -9,7 +9,7 @@
 
 ## Snapshot
 
-Abhishek Ranjan is a Full Stack AI Engineer with 4 years of experience building
+Abhishek Ranjan is a Full Stack Engineer with 4 years of experience building
 intelligent, end-to-end applications that combine LLMs, AI agents, and modern web
 stacks (React, Next.js, Spring Boot). He shipped an MCP (Model Context Protocol)
 server at Goldman Sachs that lets business users reach backend systems through

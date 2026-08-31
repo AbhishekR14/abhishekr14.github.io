@@ -12,8 +12,8 @@
 }
 
 .dark-mode .achievement-heading {
-  color: #f1f0ff;
-  border-left-color: #a855f7;
+  color: $textColorDark;
+  border-left-color: $brandAccent;
 }
 
 #achievements {
@@ -37,7 +37,7 @@
 }
 
 .dark-mode .subTitle {
-  color: #9b97c4;
+  color: $textMutedDark;
 }
 
 @media (max-width: 1380px) {

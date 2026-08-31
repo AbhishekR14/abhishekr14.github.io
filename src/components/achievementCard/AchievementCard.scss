@@ -14,7 +14,7 @@
 }
 .dark-mode .card-title,
 .dark-mode.card-title {
-  color: #f1f0ff;
+  color: $textColorDark;
 }
 .card-subtitle {
   color: $cardSubtitle;
@@ -23,7 +23,7 @@
 }
 .dark-mode .card-subtitle,
 .dark-mode.card-subtitle {
-  color: #9b97c4;
+  color: $textMutedDark;
 }
 .certificate-card {
   background-color: $lightBackground2;
@@ -49,8 +49,8 @@
 
 .dark-mode.certificate-card:hover {
   background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(168, 85, 247, 0.35);
-  box-shadow: 0 8px 40px rgba(140, 67, 206, 0.22);
+  border-color: rgba($brandAccent, 0.35);
+  box-shadow: 0 8px 40px rgba($brandMid, 0.22);
 }
 .certificate-image-div {
   position: relative;

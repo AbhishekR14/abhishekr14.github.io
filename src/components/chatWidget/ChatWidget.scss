@@ -1,9 +1,9 @@
 @import "../../_globalColor";
 
-/* Local aliases onto the existing site palette - see _globalColor.scss and the
-   :root custom properties in index.css. Nothing new is invented here. */
-$chatPurple: $skillsColor; // #a855f7
-$chatMuted: $githubRepoCardColor; // rgb(155, 151, 196)
+/* Local aliases onto the site palette in _globalColor.scss. Nothing new is
+   invented here, so the widget follows any retheme automatically. */
+$chatAccent: $brandAccent;
+$chatMuted: $textMutedDark;
 
 /* Bottom-right. The scroll-to-top button lives bottom-left so the two never
    collide - see containers/topbutton/Top.scss. */
@@ -28,7 +28,7 @@ $chatMuted: $githubRepoCardColor; // rgb(155, 151, 196)
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  background: linear-gradient(135deg, #55198b 0%, #7b2fbe 60%, #8c43ce 100%);
+  background: $brandGradient;
   color: #ffffff;
   font-family: inherit;
   font-size: 1rem;
@@ -38,18 +38,18 @@ $chatMuted: $githubRepoCardColor; // rgb(155, 151, 196)
   display: flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 6px 24px rgba(123, 47, 190, 0.45);
+  box-shadow: 0 6px 24px rgba($brandPrimary, 0.45);
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 0.25s ease, padding 0.3s cubic-bezier(0.16, 1, 0.3, 1),
     gap 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 
   &:hover {
     transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 10px 32px rgba(123, 47, 190, 0.6);
+    box-shadow: 0 10px 32px rgba($brandPrimary, 0.6);
   }
 
   &:focus-visible {
-    outline: 2px solid $chatPurple;
+    outline: 2px solid $chatAccent;
     outline-offset: 3px;
   }
 }
@@ -107,7 +107,7 @@ $chatMuted: $githubRepoCardColor; // rgb(155, 151, 196)
   color: $titleColor;
   background: #ffffff;
   border: 1px solid $lightBorder1;
-  box-shadow: 0 8px 28px rgba(123, 47, 190, 0.22);
+  box-shadow: 0 8px 28px rgba($brandPrimary, 0.22);
   animation: chat-widget-nudge-in 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
   /* Pointer down toward the trigger button. */
@@ -139,8 +139,8 @@ $chatMuted: $githubRepoCardColor; // rgb(155, 151, 196)
   background: transparent;
 
   &:hover {
-    background: rgba(168, 85, 247, 0.12);
-    color: $chatPurple;
+    background: rgba($brandAccent, 0.12);
+    color: $chatAccent;
   }
 }
 
@@ -166,7 +166,7 @@ $chatMuted: $githubRepoCardColor; // rgb(155, 151, 196)
   border-radius: 20px;
   background: #ffffff;
   border: 1px solid $lightBorder1;
-  box-shadow: 0 20px 60px rgba(123, 47, 190, 0.25);
+  box-shadow: 0 20px 60px rgba($brandPrimary, 0.25);
   transform-origin: bottom right;
   animation: chat-widget-in 0.32s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -189,7 +189,7 @@ $chatMuted: $githubRepoCardColor; // rgb(155, 151, 196)
   justify-content: space-between;
   gap: 12px;
   padding: 16px 18px;
-  background: linear-gradient(135deg, #55198b 0%, #7b2fbe 60%, #8c43ce 100%);
+  background: $brandGradient;
   color: #ffffff;
   text-align: left;
 }
@@ -274,12 +274,12 @@ $chatMuted: $githubRepoCardColor; // rgb(155, 151, 196)
   transition: border-color 0.2s ease, transform 0.2s ease;
 
   &:hover {
-    border-color: $chatPurple;
+    border-color: $chatAccent;
     transform: translateX(2px);
   }
 
   &:focus-visible {
-    outline: 2px solid $chatPurple;
+    outline: 2px solid $chatAccent;
     outline-offset: 2px;
   }
 }
@@ -296,7 +296,7 @@ $chatMuted: $githubRepoCardColor; // rgb(155, 151, 196)
 
 .chat-widget__message--user {
   align-self: flex-end;
-  background: linear-gradient(135deg, #7b2fbe 0%, #8c43ce 100%);
+  background: $brandGradientShort;
   color: #ffffff;
   border-radius: 16px 16px 4px 16px;
 }
@@ -320,7 +320,7 @@ $chatMuted: $githubRepoCardColor; // rgb(155, 151, 196)
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: $chatPurple;
+    background: $chatAccent;
     animation: chat-widget-bounce 1.2s infinite ease-in-out;
 
     &:nth-child(2) {
@@ -376,18 +376,18 @@ $chatMuted: $githubRepoCardColor; // rgb(155, 151, 196)
   padding: 7px 13px;
   border-radius: 50px;
   cursor: pointer;
-  color: $chatPurple;
-  background: rgba(168, 85, 247, 0.08);
-  border: 1px solid rgba(168, 85, 247, 0.28);
+  color: $chatAccent;
+  background: rgba($brandAccent, 0.08);
+  border: 1px solid rgba($brandAccent, 0.28);
   transition: background 0.2s ease, border-color 0.2s ease;
 
   &:hover {
-    background: rgba(168, 85, 247, 0.16);
-    border-color: $chatPurple;
+    background: rgba($brandAccent, 0.16);
+    border-color: $chatAccent;
   }
 
   &:focus-visible {
-    outline: 2px solid $chatPurple;
+    outline: 2px solid $chatAccent;
     outline-offset: 2px;
   }
 }
@@ -402,9 +402,9 @@ $chatMuted: $githubRepoCardColor; // rgb(155, 151, 196)
   line-height: 1.4;
   padding: 10px 14px;
   border-radius: 12px;
-  color: #b4232a;
-  background: rgba(212, 63, 63, 0.08);
-  border: 1px solid rgba(212, 63, 63, 0.25);
+  color: $errorText;
+  background: rgba($errorTint, 0.08);
+  border: 1px solid rgba($errorTint, 0.25);
 
   button {
     flex-shrink: 0;
@@ -415,11 +415,11 @@ $chatMuted: $githubRepoCardColor; // rgb(155, 151, 196)
     border-radius: 50px;
     cursor: pointer;
     color: #ffffff;
-    background: #b4232a;
+    background: $errorText;
     border: none;
 
     &:focus-visible {
-      outline: 2px solid $chatPurple;
+      outline: 2px solid $chatAccent;
       outline-offset: 2px;
     }
   }
@@ -464,7 +464,7 @@ $chatMuted: $githubRepoCardColor; // rgb(155, 151, 196)
 
   &:focus {
     outline: none;
-    border-color: $chatPurple;
+    border-color: $chatAccent;
   }
 
   &:disabled {
@@ -482,7 +482,7 @@ $chatMuted: $githubRepoCardColor; // rgb(155, 151, 196)
   cursor: pointer;
   color: #ffffff;
   font-size: 1rem;
-  background: linear-gradient(135deg, #7b2fbe 0%, #8c43ce 100%);
+  background: $brandGradientShort;
   transition: transform 0.2s ease, opacity 0.2s ease;
 
   &:hover:not(:disabled) {
@@ -495,7 +495,7 @@ $chatMuted: $githubRepoCardColor; // rgb(155, 151, 196)
   }
 
   &:focus-visible {
-    outline: 2px solid $chatPurple;
+    outline: 2px solid $chatAccent;
     outline-offset: 2px;
   }
 }
@@ -523,7 +523,7 @@ $chatMuted: $githubRepoCardColor; // rgb(155, 151, 196)
 /* ─── DARK THEME ──────────────────────────────────────── */
 .chat-widget--dark {
   .chat-widget__panel {
-    background: #12112a;
+    background: $darkSurface;
     border-color: $darkBoxShadow2;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
   }
@@ -542,7 +542,7 @@ $chatMuted: $githubRepoCardColor; // rgb(155, 151, 196)
     border-color: $darkBoxShadow2;
 
     &:hover {
-      border-color: rgba(168, 85, 247, 0.45);
+      border-color: rgba($brandAccent, 0.45);
       background: rgba(255, 255, 255, 0.08);
     }
   }
@@ -556,18 +556,18 @@ $chatMuted: $githubRepoCardColor; // rgb(155, 151, 196)
   .chat-widget__composer,
   .chat-widget__counter,
   .chat-widget__disclaimer {
-    background: #12112a;
+    background: $darkSurface;
   }
 
   .chat-widget__nudge {
     color: $textColorDark;
-    background: #1a1836;
-    border-color: rgba(168, 85, 247, 0.3);
+    background: $darkSurfaceRaised;
+    border-color: rgba($brandAccent, 0.3);
     box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
 
     &::after {
-      border-right-color: rgba(168, 85, 247, 0.3);
-      border-bottom-color: rgba(168, 85, 247, 0.3);
+      border-right-color: rgba($brandAccent, 0.3);
+      border-bottom-color: rgba($brandAccent, 0.3);
     }
   }
 
@@ -594,9 +594,9 @@ $chatMuted: $githubRepoCardColor; // rgb(155, 151, 196)
   }
 
   .chat-widget__error {
-    color: #ff9d9d;
-    background: rgba(212, 63, 63, 0.15);
-    border-color: rgba(212, 63, 63, 0.35);
+    color: $errorTextDark;
+    background: rgba($errorTint, 0.15);
+    border-color: rgba($errorTint, 0.35);
   }
 }
 

@@ -13,8 +13,8 @@
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(168, 85, 247, 0.06);
-  border: 1px solid rgba(168, 85, 247, 0.15);
+  background: rgba($brandAccent, 0.06);
+  border: 1px solid rgba($brandAccent, 0.15);
   border-radius: 14px;
   padding: 14px 18px;
   margin-right: 10px;
@@ -24,10 +24,10 @@
 }
 
 .software-skill-inline:hover {
-  background: rgba(168, 85, 247, 0.14);
-  border-color: #a855f7;
+  background: rgba($brandAccent, 0.14);
+  border-color: $brandAccent;
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.25);
+  box-shadow: 0 6px 20px rgba($brandAccent, 0.25);
 }
 
 .software-skill-inline > i {
@@ -48,9 +48,9 @@
 }
 
 .dark-mode .software-skill-inline > p {
-  color: #9b97c4;
+  color: $textMutedDark;
 }
 
 .software-skill-inline:hover > p {
-  color: #a855f7;
+  color: $brandAccent;
 }

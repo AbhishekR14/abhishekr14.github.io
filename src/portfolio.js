@@ -21,7 +21,7 @@ const greeting = {
   username: "Abhishek Ranjan",
   title: "Hi, I'm Abhishek",
   subTitle: emoji(
-    "Full Stack AI Engineer 🚀 with 4 years of experience building intelligent, end-to-end applications integrating LLMs, AI agents, and modern web stacks (React, Next.js, Spring Boot). Shipped an MCP server at Goldman Sachs enabling natural-language access to backend systems. Fluent across the full stack from REST APIs and microservices to React UIs and AI-augmented workflows with a strong focus on scalable architecture and production reliability."
+    "Full Stack Engineer 🚀 with 4+ years of experience building intelligent, end-to-end applications integrating LLMs, AI agents, and modern web stacks (Spring Boot, React, Next.js). Shipped an MCP server at Goldman Sachs enabling natural-language access to backend systems. Expert in backend development with Java and Python. Fluent across the full stack from REST APIs and microservices to React UIs and AI-augmented workflows with a strong focus on scalable architecture and production reliability."
   ),
   resumeLink:
     "https://drive.google.com/file/d/1ClC7qllYaMbgfuJucK6h5T2Oa5QnY_GI/view", // Set to empty to hide the button
@@ -44,12 +44,12 @@ const socialMediaLinks = {
 const skillsSection = {
   title: "What I do",
   subTitle:
-    "A Full Stack AI Engineer who builds intelligent, end-to-end applications integrating LLMs, AI agents, and modern web stacks. Tech-stack flexible with a passion for scalable architecture and production reliability.",
+    "A Full Stack Engineer who builds intelligent, end-to-end applications integrating LLMs, AI agents, and modern web stacks. Tech-stack flexible with a passion for scalable architecture and production reliability.",
   skills: [
     emoji("⚡ Build and ship AI-augmented applications using LLMs, MCP servers, and RAG pipelines"),
-    emoji("⚡ Develop full-stack web applications with React, Next.js, Spring Boot, and Node.js"),
+    emoji("⚡ Develop full-stack web applications with Java, Python, Spring Boot, React, Next.js, and Node.js"),
     emoji(
-      "⚡ Design and migrate microservices on Kubernetes and cloud platforms like Azure"
+      "⚡ Design and migrate microservices on Kubernetes and cloud platforms like AWS and Azure"
     ),
     emoji(
       "⚡ Integrate third-party services like Firebase, Azure, Vercel, Kafka, and Prometheus"

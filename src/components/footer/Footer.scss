@@ -4,7 +4,7 @@
   margin-top: 3rem;
   padding: 2.5rem 1rem;
   text-align: center;
-  border-top: 1px solid rgba(123, 47, 190, 0.15);
+  border-top: 1px solid rgba($brandPrimary, 0.15);
 }
 
 .dark-mode .footer-div {
@@ -19,9 +19,9 @@
 
 .dark-mode .footer-text,
 .dark-mode .footer-div * {
-  color: #9b97c4 !important;
+  color: $textMutedDark !important;
 }
 
 .dark-mode .footer-div a:hover {
-  color: #a855f7 !important;
+  color: $brandAccent !important;
 }
