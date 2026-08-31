@@ -4,8 +4,8 @@
 > system prompt verbatim. If a fact is not in this file, the assistant will say it
 > does not know - so add detail here rather than tweaking the prompt.
 >
-> Content below was extracted from the live site (`src/portfolio.js`). Sections
-> marked `[TODO]` are placeholders for Abhishek to fill in.
+> Content below comes from the live site (`src/portfolio.js`) and Abhishek's
+> resume (see `resume.md`, which is loaded alongside this file).
 
 ## Snapshot
 
@@ -109,7 +109,47 @@ decommissioned the .NET tool and migrated its full functionality across.
 **Stack:** Java, React, .NET.
 **Outcome:** Consolidated onto a single maintained application.
 
-<!-- [TODO] Add personal / open-source projects here. GitHub: https://github.com/AbhishekR14 -->
+### Personal projects
+
+All public on GitHub: https://github.com/AbhishekR14
+
+**FinTrack** (July 2024) - a daily finance tracker with a modern UI and visual charts
+and graphs that make expenses easier to understand. 100+ users onboarded and using it
+daily, 5000+ total unique visitors to date.
+Stack: NextJS, ReactJS, Recoil, TypeScript, Postgres, TailwindCSS.
+Repo: https://github.com/AbhishekR14/FinTrack
+
+**Tennerz** (September 2023) - a fun dice rolling game, with 50+ leaderboard users and
+300+ total unique visitors.
+Stack: ReactJS, JavaScript, Firebase.
+Repo: https://github.com/AbhishekR14/Tennerz
+
+**ExpressIt** (May 2024) - a simple and clean blogging web application.
+Stack: ReactJS, NodeJS, TypeScript, Postgres, TailwindCSS.
+Repo: https://github.com/AbhishekR14/ExpressIt
+
+**Performance analysis of symmetric key cryptography and data encryption** (July 2021) -
+his final-year capstone project. Benchmarked symmetric key cryptography methods and
+built a Raspberry Pi file-encryption web server.
+Stack: Python, Raspberry Pi.
+Repo: https://github.com/AbhishekR14/Performance-Analysis-of-Symmetric-Key-Cryptography-and-Data-Encryption-using-Raspberry-PiPerformance
+
+**This portfolio site and its chatbot** - the site you are on. A React portfolio with a
+built-in assistant running on a Node serverless function. The knowledge base is a small
+markdown corpus (this file plus `resume.md`) read once at cold start and injected
+directly into the system prompt - deliberately no chunking, no embeddings, and no vector
+store, because the whole corpus is only a few thousand tokens.
+Stack: React, Node.js serverless functions, LLM API, Vercel.
+Repo: https://github.com/AbhishekR14/abhishekr14.github.io
+
+**PayYourFren** - a web app for sending virtual currency to friends, built on the MERN
+stack. Repo: https://github.com/AbhishekR14/PayYourFren
+
+**Quizzy** - a quiz application written in Java.
+Repo: https://github.com/AbhishekR14/Quizzy
+
+**AmazedCart** - an interactive web store built with JavaScript, HTML, and CSS.
+Repo: https://github.com/AbhishekR14/AmazedCart
 
 ## Technical skills
 
@@ -121,7 +161,10 @@ Kubernetes, Azure, Kafka, Postgres, MongoDB / NoSQL, LLM integration, AI agents,
 MCP (Model Context Protocol), RAG pipelines, Prometheus and Alertmanager,
 TailwindCSS.
 
-**Also works with:** Firebase, Vercel, Git, CI/CD via GitHub Actions.
+**Also works with:** Firebase, Vercel, Recoil, Git, CI/CD via GitHub Actions.
+
+**Developer tools:** GitHub Copilot, Devin AI, VS Code, IntelliJ IDEA, GitHub and
+GitLab, Postman, Vercel, Prometheus, Alertmanager.
 
 ## Education
 
@@ -135,17 +178,25 @@ TailwindCSS.
 - **Manager Appreciation Spotlight Award**, Wells Fargo, September 2024 - for
   contributions to the Java and .NET projects.
 - **Full Stack Development Course**, 100xDevs - completed.
+  Verify: https://app.100xdevs.com/certificate/verify/YQ3XPQWT
 - **AZ-900 Azure Fundamentals**, Microsoft - certified.
+  Verify: https://www.credly.com/badges/46db3e37-ddb5-44b2-a72f-0f4501e2a4aa/public_url
 - **Basic SQL for Data Science**, UC Davis (Coursera) - certified.
+  Verify: https://www.coursera.org/account/accomplishments/verify/8FZ5WDWZB4A8
 - **.NET, MERN Stack and Java certifications**, Wells Fargo - completed.
 
 ## What I'm looking for
 
-<!-- [TODO] Abhishek to fill in: role types, domains, team size, remote/hybrid/onsite,
-     notice period, relocation. The site currently only says he is open to work. -->
+Abhishek is actively open to new opportunities.
 
-Abhishek is open to new opportunities. Specific preferences on role type, location,
-and notice period are not recorded here - visitors should email him to discuss.
+- **Role types:** AI / LLM engineering roles (Full Stack AI Engineer, AI agents, LLM
+  product work) and full-stack or backend SDE roles (Java, Spring Boot, React,
+  microservices) at the SDE 2 / senior level.
+- **Location:** based in Bengaluru, India, and open to relocating anywhere in the world.
+- **Work mode:** remote or hybrid preferred.
+- **Notice period:** 1 month.
+
+For anything not covered here, email him at aranjan0288@gmail.com.
 
 ## Contact
 
@@ -158,22 +209,31 @@ and notice period are not recorded here - visitors should email him to discuss.
 ## FAQ
 
 **Q: What's the hardest technical problem you've solved?**
-A: <!-- [TODO] --> Not recorded yet. The migration of multiple microservices from
-JDK 8 / Spring Boot 2 to JDK 21 / Spring Boot 3 across on-prem and Kubernetes
-deployments is the largest-scope piece of work on his record.
+A: The MCP (Model Context Protocol) server at Goldman Sachs. Business users previously
+had to go through the UI and search across multiple screens to find what they needed.
+The problem was exposing existing backend capabilities as tools an LLM client could call
+safely and reliably, so those users could just ask for what they wanted in natural
+language and get it without a UI layer in between. The largest-scope piece of work on
+his record is a different one: migrating multiple microservices from JDK 8 /
+Spring Boot 2 to JDK 21 / Spring Boot 3 across on-prem and Kubernetes deployments.
 
 **Q: Why should we hire you?**
-A: <!-- [TODO] --> Not recorded in his own words. What the record shows: four years
-shipping production systems at two large financial institutions, work spanning
-backend microservices, front-end React, and AI integration, and delivery with
-measurable outcomes such as roughly $100K in annual savings from replacing a
-third-party trading tool.
+A: Four years shipping production systems at two large financial institutions, with work
+spanning backend microservices, front-end React, and AI integration - and outcomes you
+can measure: roughly $100K saved annually by replacing a third-party trading tool with
+an in-house .NET application, 250+ document classes onboarded onto a new Java/React
+platform, and a multi-service JDK 21 / Spring Boot 3 migration delivered across on-prem
+and Kubernetes. He also builds and ships his own products outside work - FinTrack has
+100+ daily users - so he is comfortable owning something end to end.
 
 **Q: What are you weakest at?**
-A: <!-- [TODO] --> Not recorded. Visitors should ask him directly.
+A: Stage fright - speaking in front of a large room is not where he is most comfortable
+yet. He is actively working on it by taking up more presentations at work and doing
+things like open mics outside of it.
 
 **Q: Are you open to relocation?**
-A: <!-- [TODO] --> Not recorded. Email him to discuss.
+A: Yes - he is open to relocating anywhere in the world. He is currently based in
+Bengaluru, India, and prefers remote or hybrid arrangements.
 
 **Q: What's your notice period / availability?**
-A: <!-- [TODO] --> Not recorded. Email him to discuss.
+A: 1 month.
