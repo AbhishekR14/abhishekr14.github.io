@@ -204,7 +204,7 @@ For anything not covered here, email him at aranjan0288@gmail.com.
 - **Phone:** +91-8880796319
 - **LinkedIn:** https://www.linkedin.com/in/abhishek-ranjann
 - **GitHub:** https://github.com/AbhishekR14
-- **Resume:** https://drive.google.com/file/d/1ClC7qllYaMbgfuJucK6h5T2Oa5QnY_GI/view
+- **Resume:** https://drive.google.com/file/d/14fE5QMBKDT2mmB68kPtZDVwdivgIWTRi/view
 
 ## FAQ
 

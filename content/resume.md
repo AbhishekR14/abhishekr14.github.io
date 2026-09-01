@@ -3,7 +3,7 @@
 Bengaluru, Karnataka | +91-8880796319 | aranjan0288@gmail.com |
 [linkedin.com/in/abhishek-ranjann](https://www.linkedin.com/in/abhishek-ranjann) |
 [github.com/AbhishekR14](https://github.com/AbhishekR14) |
-[Resume PDF](https://drive.google.com/file/d/1ClC7qllYaMbgfuJucK6h5T2Oa5QnY_GI/view)
+[Resume PDF](https://drive.google.com/file/d/14fE5QMBKDT2mmB68kPtZDVwdivgIWTRi/view)
 
 ## Summary
 

@@ -24,7 +24,7 @@ const greeting = {
     "Full Stack Engineer 🚀 with 4+ years of experience building intelligent, end-to-end applications integrating LLMs, AI agents, and modern web stacks (Spring Boot, React, Next.js). Shipped an MCP server at Goldman Sachs enabling natural-language access to backend systems. Expert in backend development with Java and Python. Fluent across the full stack from REST APIs and microservices to React UIs and AI-augmented workflows with a strong focus on scalable architecture and production reliability."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1ClC7qllYaMbgfuJucK6h5T2Oa5QnY_GI/view", // Set to empty to hide the button
+    "https://drive.google.com/file/d/14fE5QMBKDT2mmB68kPtZDVwdivgIWTRi/view", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
